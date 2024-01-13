@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1705176041
+8bitlim.ttf::FontFile::4349732593191487046::1705172347::1705172351::1::::<><>::
+arrow.png::CompressedTexture2D::2914929801481069269::1705174110::1705174488::1::::<><>::
+Button.gd::GDScript::-1::1705175694::0::1::::<>Button<>::
+color_rect.tscn::PackedScene::8396008976895278499::1705175694::0::1::::<><>::uid://b28bpwd4pko8m::::res://8bitlim.ttf<>uid://bhsap57psgv30::::res://arrow.png<>res://Button.gd
+icon.svg::CompressedTexture2D::6584862477544840777::1705169144::1705169151::1::::<><>::
+menu.gd::GDScript::-1::1705170298::0::1::::<>Control<>::
+menu.tscn::PackedScene::3931694009508240794::1705175801::0::1::::<><>::res://menu.gd<>uid://b28bpwd4pko8m::::res://8bitlim.ttf<>uid://p14wmox2ihdj::::res://Berlin Fraktur/BerlinFraktur-24.otf
+::res://Berlin Fraktur/::1705171889
+BerlinFraktur-24.otf::FontFile::1108307209421057115::1705171884::1705171889::1::::<><>::
