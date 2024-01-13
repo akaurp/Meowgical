@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://drvdbnuotvlr4"]
+
+[ext_resource type="FontFile" uid="uid://b28bpwd4pko8m" path="res://8bitlim.ttf" id="1_n4v7c"]
+[ext_resource type="Texture2D" uid="uid://bhsap57psgv30" path="res://arrow.png" id="2_a8s0v"]
+[ext_resource type="Script" path="res://Button.gd" id="3_fshdw"]
+
+[node name="ColorRect" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 241.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_n4v7c")
+theme_override_font_sizes/font_size = 70
+text = "CONTROLS"
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.5
+offset_top = -68.5
+offset_right = 142.5
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_n4v7c")
+theme_override_font_sizes/font_size = 50
+text = "  : Upward
+  : Downward"
+
+[node name="ColorRect" type="Sprite2D" parent="."]
+position = Vector2(447.5, 290)
+rotation = -1.5708
+scale = Vector2(0.36, 0.32)
+texture = ExtResource("2_a8s0v")
+
+[node name="ColorRect2" type="Sprite2D" parent="."]
+position = Vector2(447.5, 370)
+rotation = 1.5708
+scale = Vector2(0.36, 0.32)
+texture = ExtResource("2_a8s0v")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -114.0
+offset_top = -169.0
+offset_right = 117.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_n4v7c")
+theme_override_font_sizes/font_size = 50
+text = "Back"
+script = ExtResource("3_fshdw")

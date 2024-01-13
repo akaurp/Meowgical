@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwasoql6oh0s1"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_m7jv6"]
+[ext_resource type="FontFile" uid="uid://b28bpwd4pko8m" path="res://8bitlim.ttf" id="2_x26qg"]
+[ext_resource type="FontFile" uid="uid://p14wmox2ihdj" path="res://Berlin Fraktur/BerlinFraktur-24.otf" id="3_yufco"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m7jv6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -280.0
+offset_right = 82.0
+offset_bottom = -165.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../QuitButton")
+theme_override_fonts/font = ExtResource("2_x26qg")
+theme_override_font_sizes/font_size = 30
+text = "Start"
+
+[node name="OptionButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x26qg")
+theme_override_font_sizes/font_size = 30
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../StartButton")
+theme_override_fonts/font = ExtResource("2_x26qg")
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_top = 148.0
+offset_right = 46.0
+offset_bottom = 188.0
+grow_horizontal = 2
+
+[node name="GameLabel" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yufco")
+theme_override_font_sizes/font_size = 150
+text = "Meowgical"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
