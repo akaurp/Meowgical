@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0v4suqv8sknc"]
+
+[ext_resource type="Script" path="res://ColorRect.gd" id="1_u1f3d"]
+
+[node name="Node" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Dialog box" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 365.0
+offset_right = 910.0
+offset_bottom = 595.0
+color = Color(0.905882, 0.752941, 0.34902, 1)
+script = ExtResource("1_u1f3d")
+
+[node name="Text" type="RichTextLabel" parent="Control/Dialog box"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 78.0
+offset_right = 419.0
+offset_bottom = 118.0
+bbcode_enabled = true
+text = "[color=#000000]Text"
+
+[node name="Name" type="RichTextLabel" parent="Control/Dialog box"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 26.0
+offset_right = 176.0
+offset_bottom = 67.0
+bbcode_enabled = true
+text = "[color=#000000] Name"
+
+[node name="Indicator" type="Polygon2D" parent="Control/Dialog box"]
+position = Vector2(103.406, 146.693)
+scale = Vector2(0.599773, 0.45484)
+color = Color(0.960784, 0.470588, 0.117647, 1)
+polygon = PackedVector2Array(866, 115, 886, 158, 908, 116)
+
+[node name="Timer" type="Timer" parent="Control/Dialog box"]
